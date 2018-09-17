@@ -5,7 +5,6 @@ import com.grahith.csv.parsing.model.DomainRecord;
 import com.grahith.csv.parsing.repository.DomainRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,8 +14,7 @@ public class LookUpService {
 
     private final DomainRepository domainRepository;
 
-    private ThreadPoolTaskExecutor executor;
-
+    public DomainRecord lookUpDomain(String domainName) throws ServiceException {
         DomainRecord domainRecord = null;
         try {
             domainRecord = domainRepository.findOne(domainName);
