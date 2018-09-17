@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: csv-parsing
+
+  data:
+    mongodb:
+      database: csv-databse
+      host: localhost
+      port: 27017
+
+  redis:
+    host: localhost
+    port: 6379
+
+  parser:
+    rootDirectory: ************* File path with max depth 2 *********

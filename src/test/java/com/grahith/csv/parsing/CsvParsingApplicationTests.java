@@ -1,4 +1,4 @@
-package com.grahith.csvparsing;
+package com.grahith.csv.parsing;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
